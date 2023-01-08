@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Column(
+          child: Row(
 //            mainAxisSize: MainAxisSize.min,
 //            verticalDirection: VerticalDirection.up,
 //            mainAxisAlignment: MainAxisAlignment.end,
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
             children: <Widget>[
               Container(
 // Widgets can only have single child. Container can only have one child
-                height: 100,
+//                height: 100,
                 width: 100,
 //            margin: EdgeInsets.symmetric(vertical: 50, horizontal: 10),
 //            margin: EdgeInsets.fromLTRB(30, 10, 50, 20),
@@ -30,15 +30,20 @@ class MyApp extends StatelessWidget {
                 color: Colors.white,
                 child: Text("Container 1"),
               ),
+//              SizedBox(
+//                width: 20,
+//              ),
               Container(
                 width: 100,
-                height: 100,
                 color: Colors.blue,
                 child: Text("Container 2"),
               ),
+              SizedBox(
+                height: 20,
+              ),
               Container(
                 width: 100,
-                height: 100,
+//                height: 100,
                 color: Colors.red,
                 child: Text("Container 3"),
               ),
