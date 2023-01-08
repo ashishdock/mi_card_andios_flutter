@@ -11,45 +11,79 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-//            mainAxisSize: MainAxisSize.min,
-//            verticalDirection: VerticalDirection.up,
-//            mainAxisAlignment: MainAxisAlignment.end,
-//            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//            crossAxisAlignment: CrossAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Container(
-// Widgets can only have single child. Container can only have one child
-//                height: 100,
-                width: 100,
-//            margin: EdgeInsets.symmetric(vertical: 50, horizontal: 10),
-//            margin: EdgeInsets.fromLTRB(30, 10, 50, 20),
-//              margin: EdgeInsets.only(left: 30),
-//              padding: EdgeInsets.all(20),
-                color: Colors.white,
-                child: Text("Container 1"),
+              CircleAvatar(
+                backgroundColor: Colors.white70,
+                backgroundImage: AssetImage("images/jon-brav.png"),
+                radius: 50,
               ),
-//              SizedBox(
-//                width: 20,
-//              ),
-              Container(
-                width: 100,
-                color: Colors.blue,
-                child: Text("Container 2"),
+              Text(
+                "Ashish Sharma",
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              Text(
+                "MOBILE APP DEVELOPER",
+                style: TextStyle(
+                  fontFamily: 'Source Sans Pro',
+                  fontSize: 20,
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white70,
+                ),
               ),
               SizedBox(
-                height: 20,
+                height: 30,
+                width: 150,
+                child: Divider(
+                  color: Colors.white,
+//                  height: 15,
+                ),
               ),
-              Container(
-                width: 100,
-//                height: 100,
-                color: Colors.red,
-                child: Text("Container 3"),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+//                padding: EdgeInsets.all(10),
+                // Changed from Container to Card.Cards do not have padding property,
+                child: ListTile(
+                    leading: Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    title: Text(
+                      "+91-123 987 4561",
+                      style: TextStyle(
+                        color: Colors.teal.shade900,
+                        fontFamily: "Source Sans Pro",
+                        fontSize: 20,
+                      ),
+                    )),
               ),
-              Container(
-                width: double.infinity,
-                height: 10,
+              Card(
+//                padding: EdgeInsets.all(10),
+                // Changed from Container to Card and Cards don't have padding property,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                color: Colors.white,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    "ashish.sharma@no-reply.com",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontFamily: "Source Sans Pro",
+                      color: Colors.teal.shade900,
+                    ),
+                  ),
+                ),
               ),
             ],
           ),
